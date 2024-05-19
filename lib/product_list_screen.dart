@@ -95,7 +95,6 @@ class _HomeScreenState extends State<HomeScreen> {
     Response response = await get(uri);
     final jsonProductList = jsonDecode(response.body);
 
-
     if (response.statusCode == 200) {
       for (Map<String, dynamic> item in jsonProductList) {
         Product product = Product(
